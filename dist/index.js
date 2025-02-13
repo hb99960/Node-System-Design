@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const AmericanDuck_1 = require("./src/AmericanDuck");
+const FlyWithNoWings_1 = require("./src/FlyWithNoWings");
+const IndianDuck_1 = require("./src/IndianDuck");
+const RuberDuck_1 = require("./src/RuberDuck");
+const indianDuck = new IndianDuck_1.IndianDuck();
+console.log(indianDuck.swim());
+console.log(indianDuck.performFly());
+indianDuck.setFlyBehaviour(new FlyWithNoWings_1.FlyWithNoWings);
+console.log(indianDuck.performFly());
+const americanDuck = new AmericanDuck_1.AmericanDuck(new FlyWithNoWings_1.FlyWithNoWings);
+console.log(americanDuck.performFly());
+const ruberDuck = new RuberDuck_1.RubberDuck();
